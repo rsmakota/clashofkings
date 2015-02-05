@@ -5,13 +5,18 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+/**
+ * Class IndexController
+ *
+ * @package AppBundle\Controller
+ */
+class IndexController extends Controller
 {
     /**
-     * @Route("/app/example", name="homepage")
+     *
      */
     public function indexAction()
     {
-        return $this->render('default/index.html.twig');
+        return $this->render('AppBundle:Index:index.html.twig');
     }
 }
