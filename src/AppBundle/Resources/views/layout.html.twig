@@ -1,6 +1,14 @@
 <html>
 <head>
 <title>Clash of kings</title>
+    {% stylesheets '@AppBundle/Resources/public/css/*' filter='cssrewrite'%}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
 </head>
-{% block content %}{% endblock %}
+<body>
+<div id="headDiv">Clash of kings</div>
+<div id="mainDiv">
+    {% block content %}{% endblock %}
+</div>
+</body>
 </html>

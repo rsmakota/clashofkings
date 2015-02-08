@@ -19,4 +19,13 @@ class IndexController extends Controller
     {
         return $this->render('AppBundle:Index:index.html.twig');
     }
+
+    /**
+     *
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+    public function inviteCodeAction()
+    {
+        return $this->render('AppBundle:Index:inviteCode.html.twig');
+    }
 }
