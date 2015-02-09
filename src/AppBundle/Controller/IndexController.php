@@ -24,8 +24,8 @@ class IndexController extends Controller
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function inviteCodeAction()
+    public function adviceAction($advice)
     {
-        return $this->render('AppBundle:Index:inviteCode.html.twig');
+        return $this->render('AppBundle:Index:'.$advice.'.html.twig');
     }
 }

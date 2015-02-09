@@ -6,6 +6,6 @@ app_index:
     defaults: {_controller: AppBundle:Index:index}
     pattern: /
 
-app_invite_code:
-    defaults: {_controller: AppBundle:Index:inviteCode}
-    pattern: /invite_code
+app_advice:
+    defaults: {_controller: AppBundle:Index:advice}
+    pattern: /advice/{advice}
