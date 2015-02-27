@@ -1,12 +1,26 @@
 security:
+    encoders:
+        Smakota\Bundle\AdminBundle\Entity\User:
+            algorithm: bcrypt
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: [ ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH ]
+
     providers:
-        in_memory:
-            memory: ~
+        administrators:
+            entity: { class: SmakotaAdminBundle:User, property: username }
 
     firewalls:
-        dev:
-            pattern: ^/(_(profiler|wdt|error)|css|images|js)/
-            security: false
+        admin_area:
+            pattern:    ^/panel
+            http_basic: ~
 
-        default:
-            anonymous: ~
+    access_control:
+        - { path: ^/admin, roles: ROLE_ADMIN }
+
+// 1. SCJP 6 better will be OCJP 7
+// 1.1 Johua Bloh
+// 1.2 Patterns any books
+// 2. Hibernate any books
+// 3. Spring 3 or 4 Reference, it's the best book according this framework or Spring Receipts
