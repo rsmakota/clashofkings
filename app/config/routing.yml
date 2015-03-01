@@ -6,7 +6,7 @@ app:
     resource: @AppBundle/Controller/
     type:     annotation
 
-app_index:
+home:
     defaults: {_controller: AppBundle:Index:index}
     pattern: /
 

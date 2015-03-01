@@ -12,15 +12,19 @@ security:
             entity: { class: SmakotaAdminBundle:User, property: username }
 
     firewalls:
-        admin_area:
-            pattern:    ^/panel
+        main:
+            pattern:    ^/.*
             http_basic: ~
+        admin_area:
+            pattern:    ^/.*
+            form_login:
+                check_path: smakota_security_check
+                login_path: smakota_login
+                always_use_default_target_path: true
+                default_target_path: smakota_admin_panel
+            logout:
+                path:   smakota_logout
+                target: home
 
     access_control:
         - { path: ^/admin, roles: ROLE_ADMIN }
-
-// 1. SCJP 6 better will be OCJP 7
-// 1.1 Johua Bloh
-// 1.2 Patterns any books
-// 2. Hibernate any books
-// 3. Spring 3 or 4 Reference, it's the best book according this framework or Spring Receipts

@@ -1,4 +1,8 @@
 services:
+    smakota_admin.user_manager:
+        class: Smakota\Bundle\AdminBundle\Service\UserManager
+        arguments: [@doctrine.orm.entity_manager]
+
 #    smakota_admin.example:
 #        class: Smakota\Bundle\AdminBundle\Example
 #        arguments: [@service_id, "plain_value", %parameter%]
