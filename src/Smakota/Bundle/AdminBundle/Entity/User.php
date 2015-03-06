@@ -31,7 +31,7 @@ class User implements AdvancedUserInterface, \Serializable
      */
     protected $username;
     /**
-     * @ORM\Column(type="string", length=32)
+     * @ORM\Column(type="string", length=256)
      */
     protected $password;
 
@@ -56,7 +56,7 @@ class User implements AdvancedUserInterface, \Serializable
      */
     protected $locked;
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", length=256, nullable=true)
      */
     protected $email;
 
@@ -67,6 +67,15 @@ class User implements AdvancedUserInterface, \Serializable
      */
     private $created;
 
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
     public function __construct()
     {
         $this->created = new \DateTime();
@@ -175,7 +184,7 @@ class User implements AdvancedUserInterface, \Serializable
      */
     public function isAccountNonExpired()
     {
-        // TODO: Implement isAccountNonExpired() method.
+        return !$this->expired;
     }
 
     /**

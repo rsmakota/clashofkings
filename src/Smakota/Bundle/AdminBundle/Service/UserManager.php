@@ -45,7 +45,7 @@ class UserManager {
         $user->setEmail($data['email']);
         $user->setRoles($data['roles']);
         $user->setSalt(md5(time()));
-        $encoder = new MessageDigestPasswordEncoder('bcrypt', true, 10);
+        $encoder = new MessageDigestPasswordEncoder('sha512', true, 10);
         $password = $encoder->encodePassword($data['password'], $user->getSalt());
         $user->setPassword($password);
 
