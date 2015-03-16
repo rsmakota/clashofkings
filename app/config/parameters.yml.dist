@@ -14,3 +14,5 @@ parameters:
     locale: en
 
     secret: ThisTokenIsNotSoSecretChangeIt
+
+    project_src_path: "%kernel.root_dir%/../src"

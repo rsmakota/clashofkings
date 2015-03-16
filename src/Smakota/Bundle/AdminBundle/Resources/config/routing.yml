@@ -1,12 +1,12 @@
-smakota_admin_panel:
+admin_panel:
     path:     /panel
     defaults: { _controller: SmakotaAdminBundle:Panel:index }
-smakota_login:
+login:
     path:     /login
     defaults: { _controller: SmakotaAdminBundle:Login:login }
-smakota_logout:
-    path:     /logout
+logout:
+    path:     /panel/logout
     defaults: { _controller: SmakotaAdminBundle:Login:logout }
-smakota_security_check:
-    path:     /login_check
+login_check:
+    path:     /panel/login_check
     defaults: { _controller: SmakotaAdminBundle:Login:securityCheck }

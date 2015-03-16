@@ -1,0 +1,11 @@
+<html>
+<head>
+    <title>Panel</title>
+    {% stylesheets '@SmakotaAdminBundle/Resources/public/css/*' filter='cssrewrite'%}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+</head>
+<body>
+{% block body %}{% endblock %}
+</body>
+</html>

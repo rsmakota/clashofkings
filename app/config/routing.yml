@@ -1,15 +1,23 @@
+i18ni18n:
+    resource: "@i18ni18nBundle/Resources/config/routing.yml"
+    prefix:   /
+
 smakota_admin:
     resource: "@SmakotaAdminBundle/Resources/config/routing.yml"
     prefix:   /
 
 app:
-    resource: @AppBundle/Controller/
+    resource: @ClashOfKingsAppBundle/Controller/
     type:     annotation
 
 home:
-    defaults: {_controller: AppBundle:Index:index}
+    defaults: {_controller: ClashOfKingsAppBundle:Index:index}
     pattern: /
 
 app_advice:
-    defaults: {_controller: AppBundle:Index:advice}
+    defaults: {_controller: ClashOfKingsAppBundle:Index:advice}
     pattern: /advice/{advice}
+
+app_building_list:
+    defaults: {_controller: ClashOfKingsAppBundle:Index:buildingList}
+    pattern: /building_list

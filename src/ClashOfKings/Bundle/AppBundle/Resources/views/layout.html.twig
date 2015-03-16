@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+<title>Clash of kings</title>
+    {% stylesheets '@ClashOfKingsAppBundle/Resources/public/css/*' filter='cssrewrite'%}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+</head>
+<body>
+<div id="headDiv">Clash of kings</div>
+<div id="mainDiv">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>

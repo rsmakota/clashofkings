@@ -1,0 +1,3 @@
+i18ni18n_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: i18ni18nBundle:Default:index }

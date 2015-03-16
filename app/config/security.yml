@@ -2,25 +2,28 @@ security:
     encoders:
         Smakota\Bundle\AdminBundle\Entity\User:
             algorithm: sha512
+            encode-as-base64: true
+            iterations: 10
 
     role_hierarchy:
         ROLE_ADMIN:       ROLE_USER
         ROLE_SUPER_ADMIN: [ ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH ]
 
     providers:
-        administrators:
+        smakota_provider:
             entity: { class: SmakotaAdminBundle:User, property: username }
 
     firewalls:
         admin_area:
             pattern:    ^/panel.*
             form_login:
-                check_path: smakota_security_check
-                login_path: smakota_login
+                provider: smakota_provider
+                check_path: login_check
+                login_path: login
                 always_use_default_target_path: true
-                default_target_path: smakota_admin_panel
+                default_target_path: admin_panel
             logout:
-                path:   smakota_logout
+                path:   logout
                 target: home
 
     access_control:

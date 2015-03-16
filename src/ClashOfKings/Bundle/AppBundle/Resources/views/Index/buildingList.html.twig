@@ -1,0 +1,19 @@
+{% extends 'ClashOfKingsAppBundle::layout.html.twig' %}
+{% block content %}
+<a href="{{ path('home') }}"> <- Назад</a>
+
+    <h1>Здания</h1>
+    {% for building in buildings %}
+
+    <h2>{{ building.getName()|trans({}, 'building')|raw }}</h2>
+    <p>
+        {{ building.getTitle()|trans({}, 'building')|raw }}
+    </p>
+    <p class="remark">
+        * {{ building.getRemark()|trans({}, 'building')|raw }}
+    </p>
+
+    {% endfor %}
+
+
+{% endblock %}

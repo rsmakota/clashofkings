@@ -5,9 +5,7 @@
 
 namespace Smakota\Bundle\AdminBundle\Entity;
 
-use Symfony\Component\Security\Core\Role\Role;
 use Symfony\Component\Security\Core\User\AdvancedUserInterface;
-use Symfony\Component\Security\Core\User\UserInterface;
 use \Doctrine\ORM\Mapping as Orm;
 /**
  * Class Building
@@ -214,7 +212,7 @@ class User implements AdvancedUserInterface, \Serializable
      */
     public function isCredentialsNonExpired()
     {
-
+        return !$this->expired;
     }
 
     /**
