@@ -42,6 +42,10 @@ class Building
      * @ORM\Column(type="text")
      */
     private $remark;
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $img;
 
     public function getId()
     {
@@ -91,6 +95,16 @@ class Building
     public function setRemark($remark)
     {
         $this->remark = $remark;
+    }
+
+    public function getImg()
+    {
+        return $this->img;
+    }
+
+    public function setImg($img)
+    {
+        $this->img = $img;
     }
 
     /**
