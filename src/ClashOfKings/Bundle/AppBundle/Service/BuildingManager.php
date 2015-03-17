@@ -6,6 +6,7 @@
 namespace ClashOfKings\Bundle\AppBundle\Service;
 
 use ClashOfKings\Bundle\AppBundle\Entity\Building;
+use Symfony\Component\DependencyInjection\ParameterBag\ParameterBag;
 
 
 /**
@@ -22,11 +23,12 @@ class BuildingManager extends AbstractManager
      */
     public function create(array $params)
     {
+        $bag = new ParameterBag($params);
         $building = new Building();
-        $building->setName($params['name']);
-        $building->setTitle($params['title']);
-        $building->setDescription($params['description']);
-        $building->setRemark($params['remark']);
+        $building->setName($bag->get('name'));
+        $building->setTitle($bag->get('title'));
+        $building->setDescription($bag->get('description'));
+        $building->setRemark($bag->get('remark'));
 
         $this->eManager->persist($building);
         $this->eManager->flush();

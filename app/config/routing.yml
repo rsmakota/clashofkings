@@ -11,13 +11,13 @@ app:
     type:     annotation
 
 home:
-    defaults: {_controller: ClashOfKingsAppBundle:Index:index}
-    pattern: /
+    defaults: {_controller: ClashOfKingsAppBundle:Index:index, _locale: %locale%}
+    pattern: /{_locale}
 
 app_advice:
     defaults: {_controller: ClashOfKingsAppBundle:Index:advice}
-    pattern: /advice/{advice}
+    pattern: /{_locale}/advice/{advice}
 
 app_building_list:
     defaults: {_controller: ClashOfKingsAppBundle:Index:buildingList}
-    pattern: /building_list
+    pattern: /{_locale}/building_list
