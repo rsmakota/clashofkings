@@ -25,6 +25,7 @@ class IndexController extends Controller
     }
 
     /**
+     * @param $advice
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */

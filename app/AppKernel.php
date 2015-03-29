@@ -19,6 +19,8 @@ class AppKernel extends Kernel
             new Smakota\Bundle\AdminBundle\SmakotaAdminBundle(),
             new i18n\Bundle\i18nBundle\i18ni18nBundle(),
             new ClashOfKings\Bundle\AppBundle\ClashOfKingsAppBundle(),
+            new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
+            new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
