@@ -1,3 +1,69 @@
-farm.name: 'Ферма'
-farm.title: 'производит еду, самый востребованный ресурс в игре. Востребованный, потому, что еда расходуется не только при активных действиях строительстве зданий и их улучьшении, найме войска, изучении науки, но и в пассивном режиме на содержании войск.'
-farm.description: 'производит еду, самый востребованный ресурс в игре. Востребованный, потому, что еда расходуется не только при активных действиях строительстве зданий и их улучьшении, найме войска, изучении науки, но и в пассивном режиме на содержании войск.'
+farm.name: 'Farm'
+farm.title: 'The <strong>Farm</strong> is the place where Food is produced and stored. Food is a basic resource that you need for build some structures and keep an army.'
+farm.description: 'The <strong>Farm</strong> is the place where Food is produced and stored. Food is a basic resource that you need for build some structures and keep an army.'
+farm.remark: 'Recommended builds 10 farms.'
+
+sawmill.name: 'Sawmill'
+sawmill.title: 'The <strong>Sawmill</strong> is place where Wood is produced and stored. <strong>Wood</strong> is the most demanded resource. You need it for build all structures.'
+sawmill.description: 'The <strong>Sawmill</strong> is place where Wood is produced and stored. <strong>Wood</strong> is the most demanded resource. You need it for build all structures.'
+sawmill.remark: 'Recommended builds 10 sawmills.'
+
+hospital.name: 'Hospital'
+hospital.title: 'The <strong>Hospital</strong> is the place where you can heal your soldiers who were wounded in battle.'
+hospital.description: 'The <strong>Hospital</strong> is the place where you can heal your soldiers who were wounded in battle. Your soldiers can be wounded in the castle defense or after attacking a monster.'
+hospital.remark: 'Recommended builds 10 hospitals.'
+
+castle.name: 'Castle'
+castle.title: 'The <strong>Castle</strong> provides an overview of your empire. '
+castle.description: 'The <strong>Castle</strong> provides an overview of your empire. It is the main building. It is the main building. You can upgrade other structures to the castle level but no higher. The castle is first building that you should update.'
+castle.remark: 'Can be only one.'
+
+fortress.name: 'Fortress'
+fortress.title: 'The <strong>Fortress</strong> is the place where defense facilities are built.'
+fortress.description: 'The <strong>Fortress</strong> is the place where defense facilities are built. Defense facilities are needed for protect the castle. They are used when your castle was attacked by enemies. Build them how many you can.'
+fortress.remark: 'Can be only one.'
+
+college.name: 'College'
+college.title: 'The <strong>College</strong> is a place where you can research various technologies.'
+college.description: 'The <strong>College</strong> is a very important building for your empire, for it is where you can research various technologiesthat will raise your empire to a higher level.'
+college.remark: 'Can be only one.'
+
+range.name: 'Range'
+range.title: 'The <strong>Range</strong> is the place where Archers are trained.'
+range.description: 'The <strong>Range</strong> is the place where Archers are trained. Here is available 10 kind of Archers.'
+range.remark: 'Can be only one.'
+
+chariot_plant.name: 'Chariot Plant'
+chariot_plant.title: 'The <strong>Chariot Plant</strong> is the place where siege equipments are built.'
+chariot_plant.description: 'The <strong>Chariot Plant</strong> is the place where siege equipments are built. Here is available 10 kind of siege equipments.'
+chariot_plant.remark: 'Can be only one.'
+
+barracks.name: 'Barracks'
+barracks.title: 'The <strong>Barracks</strong> are place where Infantries are trained.'
+barracks.description: 'The <strong>Barracks</strong> are place where Infantries are trained. Here is available 10 kind of Infantries.'
+barracks.remark: 'Can be only one.'
+
+stables.name: 'Stables'
+stables.title: 'The <strong>Stables</strong> is place where Cavalry troops are trained.'
+stables.description: 'The <strong>Stables</strong> is place where Cavalry troops are trained. Here is available 10 kind of Cavalry troops.'
+stables.remark: 'Can be only one.'
+
+walls.name: 'Walls'
+walls.title: 'The <strong>Walls</strong> are place where city defenders are stationed.'
+walls.description: 'The <strong>Walls</strong> are place where city defenders are stationed.'
+walls.remark: 'Can be only one.'
+
+watchtower.name: 'Watchtower'
+watchtower.title: 'The <strong>Watchtower</strong> is building that provides information about your enemies.'
+watchtower.description: 'The <strong>Watchtower</strong> is building that provides information about your enemies.'
+watchtower.remark: 'Can be only one.'
+
+drill_grounds.name: 'Drill Grounds'
+drill_grounds.title: 'The <strong>Drill Grounds</strong> serve as a place to rally soldiers'
+drill_grounds.description: 'The <strong>Drill Grounds</strong> serve as a place to rally soldiers.'
+drill_grounds.remark: 'Can be only one.'
+
+market.name: 'Market'
+market.title: 'The <strong>Market</strong> is building where Alliance members come to trade resources.'
+market.description: 'The <strong>Market</strong> is building where Alliance members come to trade resources.'
+market.remark: 'Can be only one.'

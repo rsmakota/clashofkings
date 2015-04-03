@@ -11,11 +11,15 @@ namespace ClashOfKings\Bundle\AppBundle\DataFixtures\ORM;
 
 use ClashOfKings\Bundle\AppBundle\Entity\Unit;
 use Doctrine\Common\DataFixtures\AbstractFixture;
-use Doctrine\Common\DataFixtures\FixtureInterface;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Doctrine\Common\Persistence\ObjectManager;
 
-class LoadUnitData extends AbstractFixture implements FixtureInterface, OrderedFixtureInterface
+/**
+ * Class LoadUnitData
+ *
+ * @package ClashOfKings\Bundle\AppBundle\DataFixtures\ORM
+ */
+class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
 {
 
     /**
