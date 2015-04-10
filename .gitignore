@@ -12,3 +12,4 @@
 /composer.phar
 .idea/*
 atlassian-ide-plugin.xml
+/web/css/*
