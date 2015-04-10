@@ -6,7 +6,7 @@ index.intro: >
 index.head: "Quick start"
 index.advice: >
     <ol>
-        <li>You can get resources and gold by <a href="%inviteCodePath%"> invite code</a> <strong>7603a4bf9b9f</strong><br>.</li>
+        <li>You can get resources and gold by <a href="%inviteCodePath%"> invite code</a> <strong>7603a4bf9b9f</strong>.</li>
         <li>Do not attack other players up to level 6. The attack takes the shield of the world and your castle will become an easy target.</li>
         <li>Execute tasks and  you will get good rewards.</li>
         <li>Do not dig for gold in the mines but receive it for tasks.</li>
@@ -18,7 +18,7 @@ index.advice: >
     </ol>
 
 back: "Back"
-survive.head: "How survive"
+survive.head: "How to survive"
 survive.content: >
     <p>
         When you start the game your castle has a <strong>Peace Shield</string>. It protects you from enemies.
