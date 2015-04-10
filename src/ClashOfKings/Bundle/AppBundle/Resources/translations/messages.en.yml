@@ -21,7 +21,7 @@ back: "Back"
 survive.head: "How to survive"
 survive.content: >
     <p>
-        When you start the game your castle has a <strong>Peace Shield</string>. It protects you from enemies.
+        When you start the game your castle has a <strong>Peace Shield</strong>. It protects you from enemies.
         Be careful, You lose shield when your castle get up level 6 or attack other player.
         
     </p>
