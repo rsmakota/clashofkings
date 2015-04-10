@@ -1,0 +1,46 @@
+index.intro: >
+    <strong>Clash of Kings</strong> is a new real time strategy game for <strong>Android</strong>, <strong>iOS</strong> and <strong>Facebook</strong>.
+    It is mix of MMORPG game build an empire where you battle to build an empire and control 7 fantasy kingdoms! If you like PVP or multiplayer online games
+    you’ll love this base building, castle defense game where you must conquer kingdoms to survive!
+
+index.head: "Quick start"
+index.advice: >
+    <ol>
+        <li>You can get resources and gold by <a href="%inviteCodePath%"> invite code</a> <strong>7603a4bf9b9f</strong><br>.</li>
+        <li>Do not attack other players up to level 6. The attack takes the shield of the world and your castle will become an easy target.</li>
+        <li>Execute tasks and  you will get good rewards.</li>
+        <li>Do not dig for gold in the mines but receive it for tasks.</li>
+        <li>Choose a strategy of development. Build <a href="%buildingListPath%">farms</a> and sawmill as many as possible.</li>
+        <li>Improve hero development skills.Improve wood incom and gathering. Wood is the most demanded resource.</li>
+        <li>Kill monsters for them to give good things and experience.</li>
+        <li>Join the clan or create your own. Membership in a clan increases the chances of <a href="%survivePath%">survival</a>.</li>
+        <li>Negotiate with the aggressors, sometimes quite simple communication to stop the attacks on your castle.</li>
+    </ol>
+
+back: "Back"
+survive.head: "How survive"
+survive.content: >
+    <p>
+        When you start the game your castle has a <strong>Peace Shield</string>. It protects you from enemies.
+        Be careful, You lose shield when your castle get up level 6 or attack other player.
+        
+    </p>
+    <p>
+         Usually kingdom populated by players from the center to the edges evenly, this means that you will be close to the players not much
+         different level from you (+-). Your task is to grow them faster. Evolve means to build and improve facilities castle and create an army. Build and update without stopping.
+    </p>
+    <p>
+        You will experience a shortage of food in the beginning of the game but after wood will be the most demanded resource.
+    </p>
+
+invite.head: "How to enter the invitation code"
+invite.content: >
+    <ol>
+        <li>Click on the icon of your hero <br><img src="/bundles/clashofkingsapp/img/invite/avatar.png"></li>
+        <li>Then settings icon in the bottom right corner <br><img src="/bundles/clashofkingsapp/img/invite/properties.png"></li>
+        <li>In the list of settings, select the icon "Invite" <br><img src="/bundles/clashofkingsapp/img/invite/invite.png"></li>
+        <li>You will see the field <br><input type="text" value="7603a4bf9b9f"></li>
+        <li>Enter this code <strong>7603a4bf9b9f</strong> and get 200 gold and resources</li>
+
+    </ol>
+head.buildings: "Buildings"

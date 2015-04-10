@@ -13,6 +13,11 @@ hospital.title: 'The <strong>Hospital</strong> is the place where you can heal y
 hospital.description: 'The <strong>Hospital</strong> is the place where you can heal your soldiers who were wounded in battle. Your soldiers can be wounded in the castle defense or after attacking a monster.'
 hospital.remark: 'Recommended builds 10 hospitals.'
 
+millitary_tent.name: 'Millitary Tent'
+millitary_tent.title: '<strong>The Millitary Tent</strong> is the place where you assemble your soldiers.'
+millitary_tent.description: '<strong>The Millitary Tent</strong> is the place where you assemble your soldiers. The more tents you have the more soldiers you can assemble.'
+millitary_tent.remark: 'Recommended builds 10 tents'
+
 castle.name: 'Castle'
 castle.title: 'The <strong>Castle</strong> provides an overview of your empire. '
 castle.description: 'The <strong>Castle</strong> provides an overview of your empire. It is the main building. It is the main building. You can upgrade other structures to the castle level but no higher. The castle is first building that you should update.'

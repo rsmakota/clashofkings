@@ -1,0 +1,25 @@
+{% extends 'ClashOfKingsAppBundle::layout.html.twig' %}
+{% block content %}
+<a href="{{ path('home') }}"> <- {{ 'back'|trans }}</a>
+
+    <h1>{{ 'head.buildings'|trans|raw }}</h1>
+    <table border="0" width="100%">
+    {% for building in buildings %}
+
+        <tr>
+            <td colspan="2"><h2><a href="{{ path('buildingInfo', {'index':building.getId()}) }}"> {{ building.getName()|trans({}, 'building')|raw }}</a></h2></td>
+        </tr>
+        <tr>
+            <td valign="top">
+                {{ building.getTitle()|trans({}, 'building')|raw }}
+                <p class="remark">
+                    * {{ building.getRemark()|trans({}, 'building')|raw }}
+                </p>
+            </td>
+            <td align="left" valign="top"><a href="{{ path('buildingInfo', {'index':building.getId()}) }}"><img align="right" width="200px" src="{{ building.getImg() }}"></a></td>
+        </tr>
+
+
+    {% endfor %}
+    </table>
+{% endblock %}

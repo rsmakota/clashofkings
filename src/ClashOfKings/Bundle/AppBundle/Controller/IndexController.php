@@ -11,10 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
  */
 class IndexController extends Controller
 {
-    protected function getBuildingManager()
-    {
-        return $this->get('clash_of_kings.building_manager');
-    }
+
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
@@ -34,14 +31,6 @@ class IndexController extends Controller
         return $this->render('ClashOfKingsAppBundle:Index:'.$advice.'.html.twig');
     }
 
-    /**
-     * @return \Symfony\Component\HttpFoundation\Response
-     */
-    public function buildingListAction()
-    {
-        $buildings = $this->getBuildingManager()->getRepository()->findAll();
 
-        return $this->render('ClashOfKingsAppBundle:Index:buildingList.html.twig', ['buildings' => $buildings]);
-    }
 
 }

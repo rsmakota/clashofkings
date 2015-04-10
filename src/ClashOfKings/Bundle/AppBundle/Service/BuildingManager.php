@@ -25,10 +25,11 @@ class BuildingManager extends AbstractManager
     {
         $bag = new ParameterBag($params);
         $building = new Building();
+        $building->setImg($bag->get('img'));
         $building->setName($bag->get('name'));
         $building->setTitle($bag->get('title'));
-        $building->setDescription($bag->get('description'));
         $building->setRemark($bag->get('remark'));
+        $building->setDescription($bag->get('description'));
 
         $this->eManager->persist($building);
         $this->eManager->flush();

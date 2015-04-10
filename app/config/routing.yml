@@ -18,6 +18,8 @@ app_advice:
     defaults: {_controller: ClashOfKingsAppBundle:Index:advice}
     pattern: /{_locale}/advice/{advice}
 
-app_building_list:
-    defaults: {_controller: ClashOfKingsAppBundle:Index:buildingList}
-    pattern: /{_locale}/building_list
+
+building:
+    resource: "@ClashOfKingsAppBundle/Controller/BuildingController.php"
+    type:     annotation
+    prefix:   /{_locale}/building
