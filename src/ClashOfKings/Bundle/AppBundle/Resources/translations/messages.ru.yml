@@ -1,3 +1,21 @@
+menu.main: "ГЛАВНАЯ"
+menu.survive: "ВЫЖИВАНИЕ"
+menu.invite_code: "КОД"
+menu.buildings: "ЗДАНИЯ"
+menu.units: "ЮНИТЫ"
+
+property.attack: "Атака"
+property.defense: "Защита"
+property.hp: "ХП"
+property.range: "Диапазон"
+property.speed: "Скорость"
+property.load: "Загрузка"
+property.upkeep: "Содержание"
+property.power: "Сила"
+
+
+
+
 index.intro: >
     <strong>Clash of Kings</strong> -это стратегия в реальные времени для <strong>Android</strong>, <strong>iOS</strong> устройств и на <strong>Facebook</strong>.
     Это смесь градостроительства, стратегии в реальном времени и Защиты Башни так, что в игре вы будите заняться развитием
@@ -47,3 +65,4 @@ invite.content: >
 
     </ol>
 head.buildings: "Здания"
+head.units: "Боевые Юниты"

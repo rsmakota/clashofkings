@@ -1,0 +1,48 @@
+{% extends 'ClashOfKingsAppBundle::layout.html.twig' %}
+{% block content %}
+<a href="{{ path('home') }}"> <- {{ 'back'|trans }}</a>
+
+    <h1>{{ 'head.units'|trans|raw }}</h1>
+    <table border="0">
+    {% for unit in units %}
+        <tr>
+            <td class="skill" align="left" valign="top" bgcolor="#706453" colspan="0"><a href="{{ path('unitInfo', {'index':unit.getId()}) }}"><img align="right" width="200px" src="{{ unit.getImg() }}"></a></td>
+            <td class="skill">
+                <table>
+                    <tr>
+                        <td class="name"> {{ "property.attack" |trans }} </td> <td class="value"> {{ unit.getAttack() }}       </td>
+                    </tr>
+                    <tr>
+                        <td class="name"> {{ "property.defense"|trans }} </td> <td class="value"> {{ unit.getDefense() }}      </td>
+                    </tr>
+                    <tr>
+                        <td class="name"> {{ "property.hp"     |trans }} </td> <td class="value"> {{ unit.getHealthPoints() }} </td>
+                    </tr>
+                    <tr>
+                        <td class="name"> {{ "property.range"  |trans }} </td> <td class="value"> {{ unit.getRange() }}        </td>
+                    </tr>
+                    <tr>
+                        <td class="name"> {{ "property.speed"  |trans }} </td> <td class="value"> {{ unit.getSpeed }}          </td>
+                    </tr>
+                    <tr>
+                        <td class="name"> {{ "property.load"   |trans }} </td> <td class="value"> {{ unit.getLoad() }}         </td>
+                    </tr>
+                    <tr>
+                        <td class="name"> {{ "property.upkeep" |trans }} </td> <td class="value"> {{ unit.getUpkeep() }}       </td>
+                    </tr>
+                    <tr>
+                        <td class="name"> {{ "property.power"  |trans }} </td> <td class="value"> {{ unit.getPower()/100 }}        </td>
+                    </tr>
+                </table>
+            </td>
+
+            <td valign="top"  style="padding-left: 10px">
+                <h2><a href="{{ path('unitInfo', {'index':unit.getId()}) }}"> {{ unit.getName()|trans({}, 'unit')|raw }}</a></h2>
+                {{ unit.getTitle()|trans({}, 'unit')|raw }}
+            </td>
+        </tr>
+
+
+    {% endfor %}
+    </table>
+{% endblock %}

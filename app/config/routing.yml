@@ -23,3 +23,8 @@ building:
     resource: "@ClashOfKingsAppBundle/Controller/BuildingController.php"
     type:     annotation
     prefix:   /{_locale}/building
+
+unit:
+    resource: "@ClashOfKingsAppBundle/Controller/UnitController.php"
+    type:     annotation
+    prefix:   /{_locale}/unit

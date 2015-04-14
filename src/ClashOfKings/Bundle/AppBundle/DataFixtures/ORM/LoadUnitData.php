@@ -44,7 +44,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_ARCHER);
         $unit->setLevel(1);
         $unit->setName('shortbowman_name');
-        $unit->getDescription('shortbowman_description');
+        $unit->setTitle('shortbowman_title');
+        $unit->setDescription('shortbowman_description');
         $unit->setAttack(8);
         $unit->setDefense(6);
         $unit->setHealthPoints(3);
@@ -62,7 +63,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_ARCHER);
         $unit->setLevel(2);
         $unit->setName('longbowman_name');
-        $unit->getDescription('longbowman_description');
+        $unit->setTitle('longbowman_title');
+        $unit->setDescription('longbowman_description');
         $unit->setAttack(11);
         $unit->setDefense(8);
         $unit->setHealthPoints(3);
@@ -80,7 +82,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_ARCHER);
         $unit->setLevel(3);
         $unit->setName('crossbowman_name');
-        $unit->getDescription('crossbowman_description');
+        $unit->setTitle('crossbowman_title');
+        $unit->setDescription('crossbowman_description');
         $unit->setAttack(26);
         $unit->setDefense(13);
         $unit->setHealthPoints(4);
@@ -98,7 +101,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_ARCHER);
         $unit->setLevel(4);
         $unit->setName('arbalester_name');
-        $unit->getDescription('arbalester_description');
+        $unit->setTitle('arbalester_title');
+        $unit->setDescription('arbalester_description');
         $unit->setAttack(35);
         $unit->setDefense(17);
         $unit->setHealthPoints(5);
@@ -116,7 +120,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_ARCHER);
         $unit->setLevel(5);
         $unit->setName('elite_longbowman_name');
-        $unit->getDescription('elite_longbowman_description');
+        $unit->setTitle('elite_longbowman_title');
+        $unit->setDescription('elite_longbowman_description');
         $unit->setAttack(25);
         $unit->setDefense(19);
         $unit->setHealthPoints(6);
@@ -134,7 +139,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_ARCHER);
         $unit->setLevel(6);
         $unit->setName('archer_guard_name');
-        $unit->getDescription('archer_guard_description');
+        $unit->setTitle('archer_guard_title');
+        $unit->setDescription('archer_guard_description');
         $unit->setAttack(32);
         $unit->setDefense(24);
         $unit->setHealthPoints(8);
@@ -152,7 +158,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_ARCHER);
         $unit->setLevel(7);
         $unit->setName('heavy_crossbowman_name');
-        $unit->getDescription('heavy_crossbowman_description');
+        $unit->setTitle('heavy_crossbowman_title');
+        $unit->setDescription('heavy_crossbowman_description');
         $unit->setAttack(68);
         $unit->setDefense(34);
         $unit->setHealthPoints(10);
@@ -170,7 +177,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_ARCHER);
         $unit->setLevel(8);
         $unit->setName('eagle_archer_name');
-        $unit->getDescription('eagle_archer_description');
+        $unit->setTitle('eagle_archer_title');
+        $unit->setDescription('eagle_archer_description');
         $unit->setAttack(47);
         $unit->setDefense(35);
         $unit->setHealthPoints(11);
@@ -188,7 +196,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_ARCHER);
         $unit->setLevel(9);
         $unit->setName('windlass_man_name');
-        $unit->getDescription('windlass_man_description');
+        $unit->setTitle('windlass_man_title');
+        $unit->setDescription('windlass_man_description');
         $unit->setAttack(98);
         $unit->setDefense(49);
         $unit->setHealthPoints(13);
@@ -201,12 +210,14 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
 
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
+
         $unit = new Unit();
         $unit->setGroup(Unit::GROUP_ARMY);
         $unit->setType(Unit::TYPE_ARCHER);
         $unit->setLevel(10);
         $unit->setName('marksman_name');
-        $unit->getDescription('marksman_description');
+        $unit->setTitle('marksman_title');
+        $unit->setDescription('marksman_description');
         $unit->setAttack(65);
         $unit->setDefense(49);
         $unit->setHealthPoints(15);
@@ -218,19 +229,15 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setImg('/upload/units/marksman.png');
 
         $manager->persist($unit);
-
-
-
-
-
-
         ////////////////////////////////////////////////////////////
+
         $unit = new Unit();
         $unit->setGroup(Unit::GROUP_ARMY);
         $unit->setType(Unit::TYPE_CAVALRY);
         $unit->setLevel(1);
         $unit->setName('rider_name');
-        $unit->getDescription('rider_description');
+        $unit->setTitle('rider_title');
+        $unit->setDescription('rider_description');
         $unit->setAttack(11);
         $unit->setDefense(8);
         $unit->setHealthPoints(4);
@@ -248,7 +255,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_CAVALRY);
         $unit->setLevel(2);
         $unit->setName('light_cavalry_name');
-        $unit->getDescription('light_cavalry_description');
+        $unit->setTitle('light_cavalry_title');
+        $unit->setDescription('light_cavalry_description');
         $unit->setAttack(15);
         $unit->setDefense(11);
         $unit->setHealthPoints(4);
@@ -266,7 +274,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_CAVALRY);
         $unit->setLevel(3);
         $unit->setName('heavy_cavalry_name');
-        $unit->getDescription('heavy_cavalry_description');
+        $unit->setTitle('heavy_cavalry_title');
+        $unit->setDescription('heavy_cavalry_description');
         $unit->setAttack(20);
         $unit->setDefense(15);
         $unit->setHealthPoints(6);
@@ -284,7 +293,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_CAVALRY);
         $unit->setLevel(4);
         $unit->setName('mounted_archer_name');
-        $unit->getDescription('mounted_archer_description');
+        $unit->setTitle('mounted_archer_title');
+        $unit->setDescription('mounted_archer_description');
         $unit->setAttack(32);
         $unit->setDefense(17);
         $unit->setHealthPoints(7);
@@ -302,7 +312,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_CAVALRY);
         $unit->setLevel(5);
         $unit->setName('cavalry_shooter_name');
-        $unit->getDescription('cavalry_shooter_description');
+        $unit->setTitle('cavalry_shooter_title');
+        $unit->setDescription('cavalry_shooter_description');
         $unit->setAttack(41);
         $unit->setDefense(22);
         $unit->setHealthPoints(9);
@@ -320,7 +331,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_CAVALRY);
         $unit->setLevel(6);
         $unit->setName('knights_templar_name');
-        $unit->getDescription('knights_templar_description');
+        $unit->setTitle('knights_templar_title');
+        $unit->setDescription('knights_templar_description');
         $unit->setAttack(44);
         $unit->setDefense(32);
         $unit->setHealthPoints(11);
@@ -337,8 +349,9 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setGroup(Unit::GROUP_ARMY);
         $unit->setType(Unit::TYPE_CAVALRY);
         $unit->setLevel(7);
-        $unit->setName('heavy_cavalry_name');
-        $unit->getDescription('heavy_cavalry_description');
+        $unit->setName('heavy_cavalry_archer_name');
+        $unit->setTitle('heavy_cavalry_archer_title');
+        $unit->setDescription('heavy_cavalry_archer_description');
         $unit->setAttack(63);
         $unit->setDefense(34);
         $unit->setHealthPoints(13);
@@ -356,7 +369,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_CAVALRY);
         $unit->setLevel(8);
         $unit->setName('royal_knight_name');
-        $unit->getDescription('royal_knight_description');
+        $unit->setTitle('royal_knight_title');
+        $unit->setDescription('royal_knight_description');
         $unit->setAttack(64);
         $unit->setDefense(47);
         $unit->setHealthPoints(15);
@@ -374,7 +388,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_CAVALRY);
         $unit->setLevel(9);
         $unit->setName('strike_archer_name');
-        $unit->getDescription('strike_archer_description');
+        $unit->setTitle('strike_archer_title');
+        $unit->setDescription('strike_archer_description');
         $unit->setAttack(91);
         $unit->setDefense(49);
         $unit->setHealthPoints(18);
@@ -392,7 +407,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_CAVALRY);
         $unit->setLevel(10);
         $unit->setName('divine_knight_name');
-        $unit->getDescription('divine_knight_description');
+        $unit->setTitle('divine_knight_title');
+        $unit->setDescription('divine_knight_description');
         $unit->setAttack(90);
         $unit->setDefense(65);
         $unit->setHealthPoints(21);
@@ -410,7 +426,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_INFANTRY);
         $unit->setLevel(1);
         $unit->setName('militia_name');
-        $unit->getDescription('militia_description');
+        $unit->setTitle('militia_title');
+        $unit->setDescription('militia_description');
         $unit->setAttack(6);
         $unit->setDefense(14);
         $unit->setHealthPoints(8);
@@ -428,7 +445,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_INFANTRY);
         $unit->setLevel(2);
         $unit->setName('infantry_name');
-        $unit->getDescription('infantry_description');
+        $unit->setTitle('infantry_title');
+        $unit->setDescription('infantry_description');
         $unit->setAttack(8);
         $unit->setDefense(19);
         $unit->setHealthPoints(9);
@@ -446,7 +464,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_INFANTRY);
         $unit->setLevel(3);
         $unit->setName('spearman_name');
-        $unit->getDescription('spearman_description');
+        $unit->setTitle('spearman_title');
+        $unit->setDescription('spearman_description');
         $unit->setAttack(22);
         $unit->setDefense(13);
         $unit->setHealthPoints(6);
@@ -464,7 +483,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_INFANTRY);
         $unit->setLevel(4);
         $unit->setName('swordsman_name');
-        $unit->getDescription('swordsman_description');
+        $unit->setTitle('swordsman_title');
+        $unit->setDescription('swordsman_description');
         $unit->setAttack(15);
         $unit->setDefense(35);
         $unit->setHealthPoints(15);
@@ -482,7 +502,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_INFANTRY);
         $unit->setLevel(5);
         $unit->setName('pikeman_name');
-        $unit->getDescription('pikeman_description');
+        $unit->setTitle('pikeman_title');
+        $unit->setDescription('pikeman_description');
         $unit->setAttack(38);
         $unit->setDefense(22);
         $unit->setHealthPoints(9);
@@ -500,7 +521,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_INFANTRY);
         $unit->setLevel(6);
         $unit->setName('noble_swordsman_name');
-        $unit->getDescription('noble_swordsman_description');
+        $unit->setTitle('noble_swordsman_title');
+        $unit->setDescription('noble_swordsman_description');
         $unit->setAttack(24);
         $unit->setDefense(56);
         $unit->setHealthPoints(22);
@@ -518,7 +540,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_INFANTRY);
         $unit->setLevel(7);
         $unit->setName('guard_name');
-        $unit->getDescription('guard_description');
+        $unit->setTitle('guard_title');
+        $unit->setDescription('guard_description');
         $unit->setAttack(29);
         $unit->setDefense(68);
         $unit->setHealthPoints(26);
@@ -536,7 +559,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_INFANTRY);
         $unit->setLevel(8);
         $unit->setName('heavy_pikeman_name');
-        $unit->getDescription('heavy_pikeman_description');
+        $unit->setTitle('heavy_pikeman_title');
+        $unit->setDescription('heavy_pikeman_description');
         $unit->setAttack(70);
         $unit->setDefense(41);
         $unit->setHealthPoints(15);
@@ -554,7 +578,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_INFANTRY);
         $unit->setLevel(9);
         $unit->setName('halberdier_name');
-        $unit->getDescription('halberdier_description');
+        $unit->setTitle('halberdier_title');
+        $unit->setDescription('halberdier_description');
         $unit->setAttack(84);
         $unit->setDefense(49);
         $unit->setHealthPoints(18);
@@ -572,7 +597,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_INFANTRY);
         $unit->setLevel(10);
         $unit->setName('berserker_name');
-        $unit->getDescription('berserker_description');
+        $unit->setTitle('berserker_title');
+        $unit->setDescription('berserker_description');
         $unit->setAttack(49);
         $unit->setDefense(114);
         $unit->setHealthPoints(42);
@@ -590,7 +616,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_ROCKET);
         $unit->setLevel(1);
         $unit->setName('bricole_name');
-        $unit->getDescription('bricole_description');
+        $unit->setTitle('bricole_title');
+        $unit->setDescription('bricole_description');
         $unit->setAttack(20);
         $unit->setDefense(9);
         $unit->setHealthPoints(5);
@@ -608,7 +635,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_ROCKET);
         $unit->setLevel(2);
         $unit->setName('assault_cart_name');
-        $unit->getDescription('assault_cart_description');
+        $unit->setTitle('assault_cart_title');
+        $unit->setDescription('assault_cart_description');
         $unit->setAttack(9);
         $unit->setDefense(14);
         $unit->setHealthPoints(8);
@@ -626,7 +654,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_ROCKET);
         $unit->setLevel(3);
         $unit->setName('mangonel_name');
-        $unit->getDescription('mangonel_description');
+        $unit->setTitle('mangonel_title');
+        $unit->setDescription('mangonel_description');
         $unit->setAttack(38);
         $unit->setDefense(17);
         $unit->setHealthPoints(7);
@@ -644,7 +673,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_ROCKET);
         $unit->setLevel(4);
         $unit->setName('battering_ram_name');
-        $unit->getDescription('battering_ram_description');
+        $unit->setTitle('battering_ram_title');
+        $unit->setDescription('battering_ram_description');
         $unit->setAttack(17);
         $unit->setDefense(25);
         $unit->setHealthPoints(13);
@@ -662,7 +692,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_ROCKET);
         $unit->setLevel(5);
         $unit->setName('heavy_mangonel_name');
-        $unit->getDescription('heavy_mangonel_description');
+        $unit->setTitle('heavy_mangonel_title');
+        $unit->setDescription('heavy_mangonel_description');
         $unit->setAttack(64);
         $unit->setDefense(28);
         $unit->setHealthPoints(11);
@@ -680,7 +711,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_ROCKET);
         $unit->setLevel(6);
         $unit->setName('demolisher_name');
-        $unit->getDescription('demolisher_description');
+        $unit->setTitle('demolisher_title');
+        $unit->setDescription('demolisher_description');
         $unit->setAttack(28);
         $unit->setDefense(40);
         $unit->setHealthPoints(19);
@@ -698,7 +730,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_ROCKET);
         $unit->setLevel(7);
         $unit->setName('onager_name');
-        $unit->getDescription('onager_description');
+        $unit->setTitle('onager_title');
+        $unit->setDescription('onager_description');
         $unit->setAttack(98);
         $unit->setDefense(44);
         $unit->setHealthPoints(16);
@@ -716,7 +749,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_ROCKET);
         $unit->setLevel(8);
         $unit->setName('ballista_name');
-        $unit->getDescription('ballista_description');
+        $unit->setTitle('ballista_title');
+        $unit->setDescription('ballista_description');
         $unit->setAttack(118);
         $unit->setDefense(53);
         $unit->setHealthPoints(19);
@@ -734,7 +768,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_ROCKET);
         $unit->setLevel(9);
         $unit->setName('siege_tower_name');
-        $unit->getDescription('siege_tower_description');
+        $unit->setTitle('siege_tower_title');
+        $unit->setDescription('siege_tower_description');
         $unit->setAttack(49);
         $unit->setDefense(70);
         $unit->setHealthPoints(32);
@@ -752,7 +787,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $unit->setType(Unit::TYPE_ROCKET);
         $unit->setLevel(10);
         $unit->setName('cannon_name');
-        $unit->getDescription('cannon_description');
+        $unit->setTitle('cannon_title');
+        $unit->setDescription('cannon_description');
         $unit->setAttack(164);
         $unit->setDefense(73);
         $unit->setHealthPoints(26);
@@ -766,6 +802,6 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
 
-
+        $manager->flush();
     }
 }

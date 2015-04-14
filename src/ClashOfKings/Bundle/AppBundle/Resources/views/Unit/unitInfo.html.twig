@@ -1,0 +1,44 @@
+{% extends 'ClashOfKingsAppBundle::layout.html.twig' %}
+
+{% block content %}
+    <a href="{{ path('home') }}"> <- {{ 'back'|trans }}</a>
+    <table>
+        <tr>
+            <td class="skill"><img src="{{ unit.getImg() }}"></td>
+            <td class="skill">
+                <table>
+                    <tr>
+                        <td class="name"> {{ "property.attack" |trans }} </td> <td class="value"> {{ unit.getAttack() }}       </td>
+                    </tr>
+                    <tr>
+                        <td class="name"> {{ "property.defense"|trans }} </td> <td class="value"> {{ unit.getDefense() }}      </td>
+                    </tr>
+                    <tr>
+                        <td class="name"> {{ "property.hp"     |trans }} </td> <td class="value"> {{ unit.getHealthPoints() }} </td>
+                    </tr>
+                    <tr>
+                        <td class="name"> {{ "property.range"  |trans }} </td> <td class="value"> {{ unit.getRange() }}        </td>
+                    </tr>
+                    <tr>
+                        <td class="name"> {{ "property.speed"  |trans }} </td> <td class="value"> {{ unit.getSpeed }}          </td>
+                    </tr>
+                    <tr>
+                        <td class="name"> {{ "property.load"   |trans }} </td> <td class="value"> {{ unit.getLoad() }}         </td>
+                    </tr>
+                    <tr>
+                        <td class="name"> {{ "property.upkeep" |trans }} </td> <td class="value"> {{ unit.getUpkeep() }}       </td>
+                    </tr>
+                    <tr>
+                        <td class="name"> {{ "property.power"  |trans }} </td> <td class="value"> {{ unit.getPower()/100 }}        </td>
+                    </tr>
+                </table>
+            </td>
+            <td valign="top">
+                <h1>{{ unit.getName()|trans({}, 'unit')|raw }}</h1>
+                <p>
+                    {{ unit.getDescription()|trans({}, 'unit')|raw }}
+                </p>
+            </td>
+        </tr>
+    </table>
+{% endblock %}

@@ -1,3 +1,18 @@
+menu.main: "MAIN"
+menu.survive: "SURVIVAL"
+menu.invite_code: "CODE"
+menu.buildings: "BUILDINGS"
+menu.units: "UNITS"
+
+property.attack: "Attack"
+property.defense: "Defense"
+property.hp: "HP"
+property.range: "Range"
+property.speed: "Speed"
+property.load: "Load"
+property.upkeep: "Upkeep"
+property.power: "Power"
+
 index.intro: >
     <strong>Clash of Kings</strong> is a new real time strategy game for <strong>Android</strong>, <strong>iOS</strong> and <strong>Facebook</strong>.
     It is mix of MMORPG game build an empire where you battle to build an empire and control 7 fantasy kingdoms! If you like PVP or multiplayer online games
@@ -6,15 +21,15 @@ index.intro: >
 index.head: "Quick start"
 index.advice: >
     <ol>
-        <li>You can get resources and gold by <a href="%inviteCodePath%"> invite code</a> <strong>7603a4bf9b9f</strong>.</li>
-        <li>Do not attack other players up to level 6. The attack takes the shield of the world and your castle will become an easy target.</li>
-        <li>Execute tasks and  you will get good rewards.</li>
+        <li>You can get resources and gold by <a href="%inviteCodePath%">the invite code</a> <strong>7603a4bf9b9f</strong>.</li>
+        <li>If your castle is not level 6 don't attack other players. When you attack you left the shield of the world and your castle becomes an easy target.</li>
+        <li>Execute tasks and you will get good rewards.</li>
         <li>Do not dig for gold in the mines but receive it for tasks.</li>
         <li>Choose a strategy of development. Build <a href="%buildingListPath%">farms</a> and sawmill as many as possible.</li>
-        <li>Improve hero development skills.Improve wood incom and gathering. Wood is the most demanded resource.</li>
+        <li>Improve hero development skills. Improve wood incom and gathering. Wood is the most demanded resource.</li>
         <li>Kill monsters for them to give good things and experience.</li>
-        <li>Join the clan or create your own. Membership in a clan increases the chances of <a href="%survivePath%">survival</a>.</li>
-        <li>Negotiate with the aggressors, sometimes quite simple communication to stop the attacks on your castle.</li>
+        <li>Join to the clan or create your own. Membership in a clan increases the chances of <a href="%survivePath%">survival</a>.</li>
+        <li>Negotiate with aggressors, sometimes quite simple communication to stop the attacks on your castle.</li>
     </ol>
 
 back: "Back"
@@ -44,3 +59,4 @@ invite.content: >
 
     </ol>
 head.buildings: "Buildings"
+head.units: "Units"

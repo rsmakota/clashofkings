@@ -38,3 +38,60 @@ img.right  {
     float: right; /* Выравнивание по правому краю  */
     margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
 }
+
+a.menu {
+    color: chocolate;
+    background-color: #565656;
+    cursor: pointer;
+    display: inline-block;
+    height: 52px;
+    line-height: 1.87;
+    margin: 5px 0;
+    outline: 0 none;
+    padding: 12px 18px;
+    position: relative;
+    vertical-align: top;
+    background: linear-gradient(#4d4d4d, #2f2f2f) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: "Lucida Grande","Lucida Sans Unicode",Tahoma,sans-serif;
+    font-size: 1.0em;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+a.menu:link {
+    color: chocolate;
+}
+a.menu:visited {
+    color: chocolate;
+}
+a.menu:hover {
+    background: linear-gradient(#4d4d4d, #4d4d4d) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+}
+
+div.menu-panel {
+    width: auto;
+    text-align: center;
+}
+
+td.skill {
+    background-color: #35312A;
+    vertical-align: top;
+    font-size: 1.4em;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+
+}
+td.skill .name {
+    color: chocolate;
+}
+td.skill .value {
+    color: #ffffff;
+    text-align: right;
+}

@@ -5,6 +5,7 @@
  */
 
 namespace ClashOfKings\Bundle\AppBundle\Entity;
+
 use \Doctrine\ORM\Mapping as Orm;
 
 /**
@@ -14,7 +15,8 @@ use \Doctrine\ORM\Mapping as Orm;
  * @ORM\Entity
  * @ORM\Table(name="units")
  */
-class Unit {
+class Unit
+{
 
     const GROUP_ARMY    = 1;
     const GROUP_MONSTER = 2;
@@ -43,6 +45,11 @@ class Unit {
     /**
      * @ORM\Column(type="string")
      */
+    private $title;
+
+    /**
+     * @ORM\Column(type="string")
+     */
     private $img;
 
     /**
@@ -55,9 +62,9 @@ class Unit {
      */
     private $defense;
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", name="health_points")
      */
-    private $health_points;
+    private $healthPoints;
 
     /**
      * @ORM\Column(type="integer")
@@ -86,9 +93,9 @@ class Unit {
     private $type;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", name="unit_group_id")
      */
-    private $group;
+    private $unitGroup;
 
     /**
      * @ORM\Column(type="integer")
@@ -123,6 +130,22 @@ class Unit {
     public function getSpeed()
     {
         return $this->speed;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * @param string $title
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
     }/**
      * @param mixed $speed
      */
@@ -224,15 +247,15 @@ class Unit {
      */
     public function getHealthPoints()
     {
-        return $this->health_points;
+        return $this->healthPoints;
     }
 
     /**
-     * @param mixed $health_points
+     * @param mixed $healthPoints
      */
-    public function setHealthPoints($health_points)
+    public function setHealthPoints($healthPoints)
     {
-        $this->health_points = $health_points;
+        $this->healthPoints = $healthPoints;
     }
 
     /**
@@ -320,7 +343,7 @@ class Unit {
      */
     public function getGroup()
     {
-        return $this->group;
+        return $this->unitGroup;
     }
 
     /**
@@ -328,6 +351,13 @@ class Unit {
      */
     public function setGroup($group)
     {
-        $this->group = $group;
+        $this->unitGroup = $group;
+    }
+    /**
+     * @return string
+     */
+    static public function clazz()
+    {
+        return get_called_class();
     }
 }

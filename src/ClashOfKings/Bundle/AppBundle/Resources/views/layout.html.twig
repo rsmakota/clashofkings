@@ -9,6 +9,15 @@
 </head>
 <body>
 <div id="headDiv">Clash of kings</div>
+<div id="menu">
+    <div class="menu-panel">
+            <a class="menu" href="{{ path('home') }}">{{ 'menu.main'|trans }}</a>
+            <a class="menu" href="{{ path('app_advice', {'advice':'survive'}) }}">{{ 'menu.survive'|trans }}</a>
+            <a class="menu" href="{{ path('app_advice', {'advice':'inviteCode'}) }}">{{ 'menu.invite_code'|trans }}</a>
+            <a class="menu" href="{{ path('buildingList') }}">{{ 'menu.buildings'|trans }} </a>
+            <a class="menu" href="{{ path('unitList') }}">{{ 'menu.units'|trans }} </a>
+    </div>
+</div>
 <div id="mainDiv">
     {% block content %}{% endblock %}
 </div>
