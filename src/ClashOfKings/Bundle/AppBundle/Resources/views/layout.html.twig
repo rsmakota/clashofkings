@@ -1,3 +1,4 @@
+{% set unLocale = app.request.locale == "en" ? "ru" : "en" %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,16 +7,32 @@
     {% stylesheets '@ClashOfKingsAppBundle/Resources/public/css/*' filter='cssrewrite'%}
     <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-61932852-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
 </head>
 <body>
+
 <div id="headDiv">Clash of kings</div>
 <div id="menu">
     <div class="menu-panel">
-            <a class="menu" href="{{ path('home') }}">{{ 'menu.main'|trans }}</a>
-            <a class="menu" href="{{ path('app_advice', {'advice':'survive'}) }}">{{ 'menu.survive'|trans }}</a>
-            <a class="menu" href="{{ path('app_advice', {'advice':'inviteCode'}) }}">{{ 'menu.invite_code'|trans }}</a>
-            <a class="menu" href="{{ path('buildingList') }}">{{ 'menu.buildings'|trans }} </a>
-            <a class="menu" href="{{ path('unitList') }}">{{ 'menu.units'|trans }} </a>
+        <a href="{{ path(app.request.get('_route'), (app.request.attributes.get('_route_params') | merge ({'_locale' : unLocale}))) }}">
+            <img src="/bundles/clashofkingsapp/img/{{ unLocale }}.png" width="58">
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu" href="{{ path('home') }}">{{ 'menu.main'|trans }}</a>
+        <a class="menu" href="{{ path('app_advice', {'advice':'survive'}) }}">{{ 'menu.survive'|trans }}</a>
+        <a class="menu" href="{{ path('app_advice', {'advice':'inviteCode'}) }}">{{ 'menu.invite_code'|trans }}</a>
+        <a class="menu" href="{{ path('buildingList') }}">{{ 'menu.buildings'|trans }} </a>
+        <a class="menu" href="{{ path('unitList') }}">{{ 'menu.units'|trans }} </a>
+
     </div>
 </div>
 <div id="mainDiv">
