@@ -6,7 +6,7 @@
     <table border="0">
     {% for unit in units %}
         <tr>
-            <td class="skill" align="left" valign="top" bgcolor="#706453" colspan="0"><a href="{{ path('unitInfo', {'index':unit.getId()}) }}"><img align="right" width="200px" src="{{ unit.getImg() }}"></a></td>
+            <td class="skill" align="left" valign="top" colspan="0"><a href="{{ path('unitInfo', {'index':unit.getId()}) }}"><img align="right" width="200px" src="{{ unit.getImg() }}"></a></td>
             <td class="skill">
                 <table>
                     <tr>

@@ -1,7 +1,7 @@
 {% extends 'ClashOfKingsAppBundle::layout.html.twig' %}
 
 {% block content %}
-    <a href="{{ path('home') }}"> <- {{ 'back'|trans }}</a>
+    <a href="{{ path('buildingList') }}"> <- {{ 'back'|trans }}</a>
     <table>
         <tr>
             <td><img src="{{ building.getImg() }}"></td>
