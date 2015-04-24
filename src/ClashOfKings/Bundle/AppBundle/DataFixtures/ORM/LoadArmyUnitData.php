@@ -19,7 +19,7 @@ use Doctrine\Common\Persistence\ObjectManager;
  *
  * @package ClashOfKings\Bundle\AppBundle\DataFixtures\ORM
  */
-class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
+class LoadArmyUnitData extends AbstractFixture implements OrderedFixtureInterface
 {
 
     /**
@@ -27,9 +27,9 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
      *
      * @return integer
      */
-    function getOrder()
+    public function getOrder()
     {
-        return 100;
+        return 150;
     }
 
     /**
@@ -39,9 +39,13 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
      */
     public function load(ObjectManager $manager)
     {
+        $typeArcher      = $this->getReference('unit_type:archer');
+        $typeCavalry     = $this->getReference('unit_type:cavalry');
+        $typeInfantry    = $this->getReference('unit_type:infantry');
+        $typeSiegeWeapon = $this->getReference('unit_type:siege_weapon');
+
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ARCHER);
+        $unit->setType($typeArcher);
         $unit->setLevel(1);
         $unit->setName('shortbowman_name');
         $unit->setTitle('shortbowman_title');
@@ -59,8 +63,7 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ///////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ARCHER);
+        $unit->setType($typeArcher);
         $unit->setLevel(2);
         $unit->setName('longbowman_name');
         $unit->setTitle('longbowman_title');
@@ -78,8 +81,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ARCHER);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeArcher);
         $unit->setLevel(3);
         $unit->setName('crossbowman_name');
         $unit->setTitle('crossbowman_title');
@@ -97,8 +100,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ARCHER);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeArcher);
         $unit->setLevel(4);
         $unit->setName('arbalester_name');
         $unit->setTitle('arbalester_title');
@@ -116,8 +119,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ARCHER);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeArcher);
         $unit->setLevel(5);
         $unit->setName('elite_longbowman_name');
         $unit->setTitle('elite_longbowman_title');
@@ -135,8 +138,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ARCHER);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeArcher);
         $unit->setLevel(6);
         $unit->setName('archer_guard_name');
         $unit->setTitle('archer_guard_title');
@@ -154,8 +157,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ARCHER);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeArcher);
         $unit->setLevel(7);
         $unit->setName('heavy_crossbowman_name');
         $unit->setTitle('heavy_crossbowman_title');
@@ -173,8 +176,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ARCHER);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeArcher);
         $unit->setLevel(8);
         $unit->setName('eagle_archer_name');
         $unit->setTitle('eagle_archer_title');
@@ -192,8 +195,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ARCHER);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeArcher);
         $unit->setLevel(9);
         $unit->setName('windlass_man_name');
         $unit->setTitle('windlass_man_title');
@@ -212,8 +215,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         ////////////////////////////////////////////////////////////
 
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ARCHER);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeArcher);
         $unit->setLevel(10);
         $unit->setName('marksman_name');
         $unit->setTitle('marksman_title');
@@ -232,8 +235,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         ////////////////////////////////////////////////////////////
 
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_CAVALRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeCavalry);
         $unit->setLevel(1);
         $unit->setName('rider_name');
         $unit->setTitle('rider_title');
@@ -251,8 +254,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_CAVALRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeCavalry);
         $unit->setLevel(2);
         $unit->setName('light_cavalry_name');
         $unit->setTitle('light_cavalry_title');
@@ -270,8 +273,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_CAVALRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeCavalry);
         $unit->setLevel(3);
         $unit->setName('heavy_cavalry_name');
         $unit->setTitle('heavy_cavalry_title');
@@ -289,8 +292,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_CAVALRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeCavalry);
         $unit->setLevel(4);
         $unit->setName('mounted_archer_name');
         $unit->setTitle('mounted_archer_title');
@@ -308,8 +311,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_CAVALRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeCavalry);
         $unit->setLevel(5);
         $unit->setName('cavalry_shooter_name');
         $unit->setTitle('cavalry_shooter_title');
@@ -327,8 +330,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_CAVALRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeCavalry);
         $unit->setLevel(6);
         $unit->setName('knights_templar_name');
         $unit->setTitle('knights_templar_title');
@@ -346,8 +349,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_CAVALRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeCavalry);
         $unit->setLevel(7);
         $unit->setName('heavy_cavalry_archer_name');
         $unit->setTitle('heavy_cavalry_archer_title');
@@ -365,8 +368,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_CAVALRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeCavalry);
         $unit->setLevel(8);
         $unit->setName('royal_knight_name');
         $unit->setTitle('royal_knight_title');
@@ -384,8 +387,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_CAVALRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeCavalry);
         $unit->setLevel(9);
         $unit->setName('strike_archer_name');
         $unit->setTitle('strike_archer_title');
@@ -403,8 +406,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_CAVALRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeCavalry);
         $unit->setLevel(10);
         $unit->setName('divine_knight_name');
         $unit->setTitle('divine_knight_title');
@@ -422,8 +425,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_INFANTRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeInfantry);
         $unit->setLevel(1);
         $unit->setName('militia_name');
         $unit->setTitle('militia_title');
@@ -441,8 +444,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_INFANTRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeInfantry);
         $unit->setLevel(2);
         $unit->setName('infantry_name');
         $unit->setTitle('infantry_title');
@@ -460,8 +463,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_INFANTRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeInfantry);
         $unit->setLevel(3);
         $unit->setName('spearman_name');
         $unit->setTitle('spearman_title');
@@ -479,8 +482,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_INFANTRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeInfantry);
         $unit->setLevel(4);
         $unit->setName('swordsman_name');
         $unit->setTitle('swordsman_title');
@@ -498,8 +501,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_INFANTRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeInfantry);
         $unit->setLevel(5);
         $unit->setName('pikeman_name');
         $unit->setTitle('pikeman_title');
@@ -517,8 +520,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_INFANTRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeInfantry);
         $unit->setLevel(6);
         $unit->setName('noble_swordsman_name');
         $unit->setTitle('noble_swordsman_title');
@@ -536,8 +539,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_INFANTRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeInfantry);
         $unit->setLevel(7);
         $unit->setName('guard_name');
         $unit->setTitle('guard_title');
@@ -555,8 +558,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_INFANTRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeInfantry);
         $unit->setLevel(8);
         $unit->setName('heavy_pikeman_name');
         $unit->setTitle('heavy_pikeman_title');
@@ -574,8 +577,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_INFANTRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeInfantry);
         $unit->setLevel(9);
         $unit->setName('halberdier_name');
         $unit->setTitle('halberdier_title');
@@ -593,8 +596,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_INFANTRY);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeInfantry);
         $unit->setLevel(10);
         $unit->setName('berserker_name');
         $unit->setTitle('berserker_title');
@@ -612,8 +615,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ROCKET);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeSiegeWeapon);
         $unit->setLevel(1);
         $unit->setName('bricole_name');
         $unit->setTitle('bricole_title');
@@ -631,8 +634,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ROCKET);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeSiegeWeapon);
         $unit->setLevel(2);
         $unit->setName('assault_cart_name');
         $unit->setTitle('assault_cart_title');
@@ -650,8 +653,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ROCKET);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeSiegeWeapon);
         $unit->setLevel(3);
         $unit->setName('mangonel_name');
         $unit->setTitle('mangonel_title');
@@ -669,8 +672,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ROCKET);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeSiegeWeapon);
         $unit->setLevel(4);
         $unit->setName('battering_ram_name');
         $unit->setTitle('battering_ram_title');
@@ -688,8 +691,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ROCKET);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeSiegeWeapon);
         $unit->setLevel(5);
         $unit->setName('heavy_mangonel_name');
         $unit->setTitle('heavy_mangonel_title');
@@ -707,8 +710,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ROCKET);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeSiegeWeapon);
         $unit->setLevel(6);
         $unit->setName('demolisher_name');
         $unit->setTitle('demolisher_title');
@@ -726,8 +729,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ROCKET);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeSiegeWeapon);
         $unit->setLevel(7);
         $unit->setName('onager_name');
         $unit->setTitle('onager_title');
@@ -745,8 +748,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ROCKET);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeSiegeWeapon);
         $unit->setLevel(8);
         $unit->setName('ballista_name');
         $unit->setTitle('ballista_title');
@@ -764,8 +767,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ROCKET);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeSiegeWeapon);
         $unit->setLevel(9);
         $unit->setName('siege_tower_name');
         $unit->setTitle('siege_tower_title');
@@ -783,8 +786,8 @@ class LoadUnitData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($unit);
         ////////////////////////////////////////////////////////////
         $unit = new Unit();
-        $unit->setGroup(Unit::GROUP_ARMY);
-        $unit->setType(Unit::TYPE_ROCKET);
+        //$unit->setGroup($groupArmy);
+        $unit->setType($typeSiegeWeapon);
         $unit->setLevel(10);
         $unit->setName('cannon_name');
         $unit->setTitle('cannon_title');

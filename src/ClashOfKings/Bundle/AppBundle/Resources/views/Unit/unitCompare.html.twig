@@ -1,0 +1,34 @@
+{% extends 'ClashOfKingsAppBundle::layout.html.twig' %}
+{% block content %}
+    <table align="center">
+        <tr>
+            <td class="skill"><img src="{{ one.getImg() }}"></td>
+            <td class="skill">
+                <table>
+                    <tr> <td class="name"> {{ "property.attack" |trans }} </td> <td class="value"> {{ one.getAttack() }}       </td> </tr>
+                    <tr> <td class="name"> {{ "property.defense"|trans }} </td> <td class="value"> {{ one.getDefense() }}      </td> </tr>
+                    <tr> <td class="name"> {{ "property.hp"     |trans }} </td> <td class="value"> {{ one.getHealthPoints() }} </td> </tr>
+                    <tr> <td class="name"> {{ "property.range"  |trans }} </td> <td class="value"> {{ one.getRange() }}        </td> </tr>
+                    <tr> <td class="name"> {{ "property.speed"  |trans }} </td> <td class="value"> {{ one.getSpeed }}          </td> </tr>
+                    <tr> <td class="name"> {{ "property.load"   |trans }} </td> <td class="value"> {{ one.getLoad() }}         </td> </tr>
+                    <tr> <td class="name"> {{ "property.upkeep" |trans }} </td> <td class="value"> {{ one.getUpkeep() }}       </td> </tr>
+                    <tr> <td class="name"> {{ "property.power"  |trans }} </td> <td class="value"> {{ one.getPower()/100 }}    </td> </tr>
+                </table>
+            </td>
+            <td class="skill">
+                <table>
+                    <tr> <td class="invert_value"> {{ another.getAttack() }}       </td> <td class="invert_name"> {{ "property.attack" |trans }} </td>  </tr>
+                    <tr> <td class="invert_value"> {{ another.getDefense() }}      </td> <td class="invert_name"> {{ "property.defense"|trans }} </td>  </tr>
+                    <tr> <td class="invert_value"> {{ another.getHealthPoints() }} </td> <td class="invert_name"> {{ "property.hp"     |trans }} </td>  </tr>
+                    <tr> <td class="invert_value"> {{ another.getRange() }}        </td> <td class="invert_name"> {{ "property.range"  |trans }} </td>  </tr>
+                    <tr> <td class="invert_value"> {{ another.getSpeed }}          </td> <td class="invert_name"> {{ "property.speed"  |trans }} </td>  </tr>
+                    <tr> <td class="invert_value"> {{ another.getLoad() }}         </td> <td class="invert_name"> {{ "property.load"   |trans }} </td>  </tr>
+                    <tr> <td class="invert_value"> {{ another.getUpkeep() }}       </td> <td class="invert_name"> {{ "property.upkeep" |trans }} </td>  </tr>
+                    <tr> <td class="invert_value"> {{ another.getPower()/100 }}    </td> <td class="invert_name"> {{ "property.power"  |trans }} </td>  </tr>
+                </table>
+            </td>
+            <td class="skill"><img src="{{ another.getImg() }}"></td>
+
+        </tr>
+    </table>
+{% endblock %}

@@ -1,33 +1,72 @@
 shortbowman_name: 'Shortbowman'
-shortbowman_description: 'Most basic Archer unit. They can suppress Pikeman!'
-shortbowman_title: 'Most basic Archer unit. They can suppress Pikeman!'
+shortbowman_title: 'Most basic Archer unit. Armed with a short bow, attack and Defense are comparatively low. They can suppress Pikeman!'
+shortbowman_description: >
+    Most basic Archer unit. Armed with a short bow, attack and Defense are comparatively low.
+    This unit is a perfect beginning for every ruler who needs unit with range bigger than the Infantry.
+    They have Attack Bonus to units except Infantry and Double Attack Speed!
+
 longbowman_name: 'Longbowman'
-longbowman_description: 'Common Archer unit with longbowl. High attack rate and can suppress Pikeman!'
-longbowman_title: 'Common Archer unit with longbowl. High attack rate and can suppress Pikeman!'
+longbowman_description: 'Longbow Archers have strong long-distance attacks. High attack rate and can suppress Pikeman!'
+longbowman_title: >
+    A more advanced ranged unit armed with a powerful longbow.
+    Longbow Archers have strong long-distance attacks.
+    They have Attack Bonus to units except Infantry and Double Attack Speed!
+
 crossbowman_name: 'Crossbowman'
-crossbowman_description: 'Common Archer unit that is great for city defense. High attack and high Crit!'
 crossbowman_title: 'Common Archer unit that is great for city defense. High attack and high Crit!'
+crossbowman_description: >
+    Common Archer unit that is great for city defense.
+    They to equip a devastating continuous-fire bow mechanism.
+    They get attack bonus during defense, greatly increases the Crossbowmen Attack and greatly improves Range!
+
 arbalester_name: 'Arbalester'
-arbalester_description: 'Crossbowman unit equipped with reinforced crossbows. High attack and high Crit!'
-arbalester_title: 'Crossbowman unit equipped with reinforced crossbows. High attack and high Crit!'
+arbalester_title: 'Crossbowman unit equipped with reinforced crossbows. High attack and high Crit! Arbalester is more powerful against infantry than any of the previous units.'
+arbalester_description: >
+    Crossbowman unit equipped with reinforced crossbows. High attack and high Crit!
+    Arbalester is more powerful against infantry than any of the previous units.
+    Arbalester gets attack bonus during defense, greatly increases the Crossbowmen Attack and greatly improves Range!
+
 elite_longbowman_name: 'Elite Longbowman'
-elite_longbowman_description: 'Archer unit. High attack rate and can suppress Pikeman!'
-elite_longbowman_title: 'Archer unit. High attack rate and can suppress Pikeman!'
+elite_longbowman_title: "Archer unit. High attack rate and can suppress Pikeman!"
+elite_longbowman_description: >
+    The Elite Longbow Archer is important Archer Unit.
+    The bigger arrows do more damage and the larger range allows you to place your Longbow archers deep within your Army.
+    There they are at a safe distance from the enemy's Infantry and Cavalry but this doesn't work both ways - your
+    Elite Longbowman will be able to hit the front lines of the enemy and thanks to the bigger arrows,
+    you will do a great amount of damage to the opponents Cavalry.
+    That's why the Elite Longbow archers are inseparable part of the perfect Army.
+    The Longbow archer has big damage against Cavalry Units, who are the most important part from the enemy front line.
+    The Elite Longbowman has Attack Bonus to units except Infantry and Double Attack Speed!
+
 archer_guard_name: 'Archer Guard'
-archer_guard_description: 'Archer unit and your personal guards. High attack rate and can suppress Pikeman!'
-archer_guard_title: 'Archer unit and your personal guards. High attack rate and can suppress Pikeman!'
+archer_guard_description: 'Archer unit and your personal guards. The Archer Guard has Attack Bonus to units except Infantry and Double Attack Speed!'
+archer_guard_title: >
+    The Archer Guard is Archer unit and your personal guard.
+    The Archer Guard has Attack Bonus to units except Infantry and Double Attack Speed!
+
 heavy_crossbowman_name: 'Heavy Crossbowman'
 heavy_crossbowman_description: 'Elite Crossbowman unit equipped with heavy crossbows. High attack and high Crit!'
-heavy_crossbowman_title: 'Elite Crossbowman unit equipped with heavy crossbows. High attack and high Crit!'
+heavy_crossbowman_title: >
+    Elite Crossbowman unit equipped with heavy crossbows.
+    The Heavy Crossbow Archer is a very useful Unit.
+    The crossbow allows him to shoot arrows at a longer distance and also more accurately.
+    The crossbow's arrows are very strong and they do a lot of damage to every type of Unit.
+    So if you position your Crossbow Archers in just the right spot so that you take full advantage of its big range,
+    this Unit will help you win a lot of Battles. High attack and high Crit!"
+
 eagle_archer_name: 'Eagle Archer'
 eagle_archer_description: 'Elite Archer unit. High attack rate and can suppress Pikeman!'
 eagle_archer_title: 'Elite Archer unit. High attack rate and can suppress Pikeman!'
+
 windlass_man_name: 'Windlass Man'
 windlass_man_description: 'Legendary Crossbowmen unit equipped with huge crossbows. High attack power but attack speed lower than Archer units!'
 windlass_man_title: 'Legendary Crossbowmen unit equipped with huge crossbows. High attack power but attack speed lower than Archer units!'
+
 marksman_name: 'Marksman'
 marksman_description: 'Legendary Archer unit that never misses its target. A Pickeman worst nightmare!'
 marksman_title: 'Legendary Archer unit that never misses its target. A Pickeman worst nightmare!'
+
+###########################################################################################################################################################
 
 rider_name: 'Rider'
 rider_description: 'Most basic Cavalery unit. They have no training, but they ride fast and can charge rear enemy units!'

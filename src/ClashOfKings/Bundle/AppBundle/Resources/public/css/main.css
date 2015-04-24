@@ -95,3 +95,11 @@ td.skill .value {
     color: #ffffff;
     text-align: right;
 }
+td.skill .invert_name {
+    color: chocolate;
+    text-align: right;
+}
+td.skill .invert_value {
+    color: #ffffff;
+    text-align: right;
+}

@@ -1,18 +1,22 @@
-menu.main: "ГЛАВНАЯ"
-menu.survive: "ВЫЖИВАНИЕ"
+menu.main:        "ГЛАВНАЯ"
+menu.units:       "ЮНИТЫ"
+menu.survive:     "ВЫЖИВАНИЕ"
+menu.buildings:   "ЗДАНИЯ"
 menu.invite_code: "КОД"
-menu.buildings: "ЗДАНИЯ"
-menu.units: "ЮНИТЫ"
 
-property.attack: "Атака"
+property.attack:  "Атака"
 property.defense: "Защита"
-property.hp: "ХП"
-property.range: "Диапазон"
-property.speed: "Скорость"
-property.load: "Загрузка"
-property.upkeep: "Содержание"
-property.power: "Сила"
+property.hp:      "ХП"
+property.range:   "Диапазон"
+property.speed:   "Скорость"
+property.load:    "Загрузка"
+property.upkeep:  "Содержание"
+property.power:   "Сила"
 
+unit_type.archer_name:       'Лучники'
+unit_type.cavalry_name:      'Кавалерия'
+unit_type.infantry_name:     'Пехота'
+unit_type.siege_weapon_name: 'Осадные Орудия'
 
 
 

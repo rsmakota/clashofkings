@@ -10,6 +10,7 @@ use \Doctrine\ORM\Mapping as Orm;
 
 /**
  * Class Unit
+ *
  * @package ClashOfKings\Bundle\AppBundle\Entity
  *
  * @ORM\Entity
@@ -18,13 +19,13 @@ use \Doctrine\ORM\Mapping as Orm;
 class Unit
 {
 
-    const GROUP_ARMY    = 1;
-    const GROUP_MONSTER = 2;
+    const GROUP_ARMY          = 1;
+    const GROUP_MONSTER       = 2;
 
-    const TYPE_ARCHER   = 1;
-    const TYPE_INFANTRY = 2;
-    const TYPE_CAVALRY  = 3;
-    const TYPE_ROCKET   = 4;
+    const TYPE_ARCHER         = 1;
+    const TYPE_INFANTRY       = 2;
+    const TYPE_CAVALRY        = 3;
+    const TYPE_SIEGE_WEAPON   = 4;
 
     /**
      * @ORM\Id
@@ -88,14 +89,10 @@ class Unit
     private $power;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\ManyToOne(targetEntity="UnitType")
+     * @ORM\JoinColumn(name="type_id", referencedColumnName="id")
      */
     private $type;
-
-    /**
-     * @ORM\Column(type="integer", name="unit_group_id")
-     */
-    private $unitGroup;
 
     /**
      * @ORM\Column(type="integer")
@@ -338,21 +335,6 @@ class Unit
         $this->type = $type;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getGroup()
-    {
-        return $this->unitGroup;
-    }
-
-    /**
-     * @param mixed $group
-     */
-    public function setGroup($group)
-    {
-        $this->unitGroup = $group;
-    }
     /**
      * @return string
      */

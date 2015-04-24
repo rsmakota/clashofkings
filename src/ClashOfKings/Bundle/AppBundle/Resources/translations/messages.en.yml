@@ -1,17 +1,22 @@
-menu.main: "MAIN"
-menu.survive: "SURVIVAL"
+menu.main:        "MAIN"
+menu.units:       "UNITS"
+menu.survive:     "SURVIVAL"
+menu.buildings:   "BUILDINGS"
 menu.invite_code: "CODE"
-menu.buildings: "BUILDINGS"
-menu.units: "UNITS"
 
-property.attack: "Attack"
+property.attack:  "Attack"
 property.defense: "Defense"
-property.hp: "HP"
-property.range: "Range"
-property.speed: "Speed"
-property.load: "Load"
-property.upkeep: "Upkeep"
-property.power: "Power"
+property.hp:      "HP"
+property.range:   "Range"
+property.speed:   "Speed"
+property.load:    "Load"
+property.upkeep:  "Upkeep"
+property.power:   "Power"
+
+unit_type.archer_name:       'Archer'
+unit_type.cavalry_name:      'Cavalry'
+unit_type.infantry_name:     'Infantry'
+unit_type.siege_weapon_name: 'Siege Weapon'
 
 index.intro: >
     <strong>Clash of Kings</strong> is a new real time strategy game for <strong>Android</strong>, <strong>iOS</strong> and <strong>Facebook</strong>.
