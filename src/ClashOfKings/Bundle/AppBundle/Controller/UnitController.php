@@ -7,12 +7,12 @@
 namespace ClashOfKings\Bundle\AppBundle\Controller;
 
 use ClashOfKings\Bundle\AppBundle\Entity\Unit;
-use ClashOfKings\Bundle\AppBundle\Entity\UnitGroup;
 use ClashOfKings\Bundle\AppBundle\Entity\UnitType;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Class UnitController
@@ -76,18 +76,18 @@ class UnitController extends Controller
 
     /**
      * Units list
-     * @param integer $one
-     * @param integer $another
+     * @param Request $request
      *
      * @Route("/compare", name="unitCompare")
      * @Template()
      *
      * @return array
      */
-    public function unitCompareAction($one, $another)
+    public function unitCompareAction(Request $request)
     {
-        $unitOne     = $this->getUnitRepository()->find($one);
-        $unitAnother = $this->getUnitRepository()->find($another);
+        $data = $request->request->all();
+        $unitOne     = $this->getUnitRepository()->find($data['one']);
+        $unitAnother = $this->getUnitRepository()->find($data['another']);
         $unitTypes   = $this->getUnitTypesArmy();
 
         return ['one' => $unitOne, 'another' => $unitAnother, 'unitTypes' => $unitTypes];

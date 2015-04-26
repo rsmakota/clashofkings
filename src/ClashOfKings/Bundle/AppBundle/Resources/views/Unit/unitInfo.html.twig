@@ -11,7 +11,7 @@
                     <tr> <td class="name"> {{ "property.defense"|trans }} </td> <td class="value"> {{ unit.getDefense() }}      </td> </tr>
                     <tr> <td class="name"> {{ "property.hp"     |trans }} </td> <td class="value"> {{ unit.getHealthPoints() }} </td> </tr>
                     <tr> <td class="name"> {{ "property.range"  |trans }} </td> <td class="value"> {{ unit.getRange() }}        </td> </tr>
-                    <tr> <td class="name"> {{ "property.speed"  |trans }} </td> <td class="value"> {{ unit.getSpeed }}          </td> </tr>
+                    <tr> <td class="name"> {{ "property.speed"  |trans }} </td> <td class="value"> {{ unit.getSpeed() }}        </td> </tr>
                     <tr> <td class="name"> {{ "property.load"   |trans }} </td> <td class="value"> {{ unit.getLoad() }}         </td> </tr>
                     <tr> <td class="name"> {{ "property.upkeep" |trans }} </td> <td class="value"> {{ unit.getUpkeep() }}       </td> </tr>
                     <tr> <td class="name"> {{ "property.power"  |trans }} </td> <td class="value"> {{ unit.getPower()/100 }}    </td> </tr>
@@ -22,7 +22,19 @@
                 <p style="padding: 10px">
                     {{ unit.getDescription()|trans({}, 'unit')|raw }}
                 </p>
-                {% include 'ClashOfKingsAppBundle:Unit:unitListForm.html.twig' %}
+                <form action="{{ path('unitCompare') }}" method="post">
+                    <select name="one">
+                        {% for type in unitTypes %}
+                            <option disabled>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ type.getName() |trans }}</option>
+                            {% for armyUnit in type.getUnits() %}
+                                <option value="{{ armyUnit.getId() }}">{{ armyUnit.getLevel() }}.  {{ armyUnit.getName()|trans({}, 'unit')|raw }} </option>
+                            {% endfor %}
+                        {% endfor %}
+
+                    </select>
+                    <input type="hidden" name="another" value="{{ unit.getId() }}">
+                    <input type="submit" value="Ok">
+                </form>
             </td>
         </tr>
     </table>

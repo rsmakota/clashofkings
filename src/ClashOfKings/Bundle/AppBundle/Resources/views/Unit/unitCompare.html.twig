@@ -1,7 +1,38 @@
 {% extends 'ClashOfKingsAppBundle::layout.html.twig' %}
 {% block content %}
+    <form action="{{ path('unitCompare') }}" method="post">
+
+
     <table align="center">
         <tr>
+            <td></td>
+            <td>
+                <select name="one">
+                    {% for type in unitTypes %}
+                        <option disabled>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ type.getName() |trans }}</option>
+                        {% for armyUnit in type.getUnits() %}
+                            <option value="{{ armyUnit.getId() }}" {% if armyUnit.getId() == one.getId() %} selected {% endif %}>{{ armyUnit.getLevel() }}.  {{ armyUnit.getName()|trans({}, 'unit')|raw }} </option>
+                        {% endfor %}
+                    {% endfor %}
+
+                </select>
+            </td>
+            <td>
+                <select name="another">
+                    {% for type in unitTypes %}
+                        <option disabled>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ type.getName() |trans }}</option>
+                        {% for armyUnit in type.getUnits() %}
+                            <option value="{{ armyUnit.getId() }}"{% if armyUnit.getId() == another.getId() %} selected {% endif %}>{{ armyUnit.getLevel() }}.  {{ armyUnit.getName()|trans({}, 'unit')|raw }} </option>
+                        {% endfor %}
+                    {% endfor %}
+
+                </select>
+                <input type="submit" value="Ok">
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+
             <td class="skill"><img src="{{ one.getImg() }}"></td>
             <td class="skill">
                 <table>
@@ -31,4 +62,5 @@
 
         </tr>
     </table>
+    </form>
 {% endblock %}
