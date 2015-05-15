@@ -1,0 +1,6 @@
+{% extends 'ClashOfKingsAppBundle::layout.html.twig' %}
+{% block content %}
+    <a href="{{ path('home') }}"> <- {{ 'back'|trans }}</a>
+    <h1>{{ 'activationCode.head'|trans }}</h1>
+    <p> {{ 'activationCode.content'|trans|raw }} </p>
+{% endblock %}

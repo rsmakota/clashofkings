@@ -27,6 +27,7 @@ index.head: "Quick start"
 index.advice: >
     <ol>
         <li>You can get resources and gold by <a href="%inviteCodePath%">the invite code</a> <strong>7603a4bf9b9f</strong>.</li>
+        <li>You can get resources by <a href="%activationCodePath%">acivation codes</a> <strong>COK</strong> and <strong>FbFansReward</strong>
         <li>If your castle is not level 6 don't attack other players. When you attack you left the shield of the world and your castle becomes an easy target.</li>
         <li>Execute tasks and you will get good rewards.</li>
         <li>Do not dig for gold in the mines but receive it for tasks.</li>
@@ -62,6 +63,15 @@ invite.content: >
         <li>You will see the field <br><input type="text" value="7603a4bf9b9f"></li>
         <li>Enter this code <strong>7603a4bf9b9f</strong> and get 200 gold and resources</li>
 
+    </ol>
+activationCode.head: "How to enter the Activation Code"
+activationCode.content: >
+    <ol>
+        <li>Click on the icon of your hero <br><img src="/bundles/clashofkingsapp/img/invite/avatar.png"></li>
+        <li>Then settings icon in the bottom right corner <br><img src="/bundles/clashofkingsapp/img/invite/properties.png"></li>
+        <li>In the list of settings, select the icon <strong>Activation Code</strong> <br><img src="/bundles/clashofkingsapp/img/activation.jpg"></li>
+        <li>You will see the field <br><input type="text" value="COK"></li>
+        <li>Enter these codes <strong>COK</strong> and <strong>FbFansRewards</strong> and get gold and resources</li>
     </ol>
 head.buildings: "Buildings"
 head.units: "Units"

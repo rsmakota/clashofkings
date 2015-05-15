@@ -31,6 +31,7 @@ index.head: "Быстрый старт"
 index.advice: >
     <ol>
         <li>Получить ресурсы по <a href="%inviteCodePath%"> пригласительному коду</a> <strong>7603a4bf9b9f</strong><br></li>
+        <li>Получить русурсы по <a href="%activationCodePath%">кодам активации</a> <strong>COK</strong> и <strong>FbFansReward</strong>
         <li>Не нападай на других играков до 6 уровня. Нападение снимит щит мира и твой замок станет легкой мишенью</li>
         <li>Выполняй задания, за них дают хорошее вознаграждение</li>
         <li>Не добывай золото в рудниках, а получай его за задания</li>
@@ -68,5 +69,15 @@ invite.content: >
         <li>Введите этот код <strong>7603a4bf9b9f</strong> и получите 200 золота и ресурсы</li>
 
     </ol>
+activationCode.head: "Как ввести код активации"
+activationCode.content: >
+    <ol>
+        <li>Кликните на иконку вашего героя <br><img src="/bundles/clashofkingsapp/img/invite/avatar.png"></li>
+        <li>Затем на иконку настроек, в нижнем правом углу <br><img src="/bundles/clashofkingsapp/img/invite/properties.png"></li>
+        <li>В списке настроек выперите иконку <strong>Код активации</strong> <br><img src="/bundles/clashofkingsapp/img/activation.jpg"></li>
+        <li>Появится поле с предложением ввести код <br><input type="text" value="COK"></li>
+        <li>Введите этот коды по очереди <strong>COK</strong> и <strong>FbFansRewards</strong>, получите золота и ресурсы</li>
+    </ol>
+
 head.buildings: "Здания"
 head.units: "Боевые Юниты"
