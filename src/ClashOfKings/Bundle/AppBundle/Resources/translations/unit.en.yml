@@ -86,7 +86,7 @@ cavalry_shooter_title: 'Mounted Archer unit that is a special ranged unit with g
 knights_templar_name: 'Knights Templar'
 knights_templar_description: 'Elite Cavalry unit that boldly charges into the fight. Fast and can charge rear enemy units!'
 knights_templar_title: 'Elite Cavalry unit that boldly charges into the fight. Fast and can charge rear enemy units!'
-heavy_cavalry_archer_name: 'Heavy Cavalry'
+heavy_cavalry_archer_name: 'Heavy Cavalry-Archer'
 heavy_cavalry_archer_description: 'Elite Mounted Archer unit that is a special ranged unit. Fast and can charge rear enemy units. Receives bonuses in resource wars!'
 heavy_cavalry_archer_title: 'Elite Mounted Archer unit that is a special ranged unit. Fast and can charge rear enemy units. Receives bonuses in resource wars!'
 royal_knight_name: 'Royal Knight'

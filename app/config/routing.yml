@@ -7,16 +7,16 @@ smakota_admin:
     prefix:   /
 
 app:
-    resource: @ClashOfKingsAppBundle/Controller/
+    resource: '@ClashOfKingsAppBundle/Controller/'
     type:     annotation
 
 home:
-    defaults: {_controller: ClashOfKingsAppBundle:Index:index, _locale: %locale%}
-    pattern: /{_locale}
+    defaults: {_controller: ClashOfKingsAppBundle:Index:index, _locale: '%locale%'}
+    path: /{_locale}
 
 app_advice:
     defaults: {_controller: ClashOfKingsAppBundle:Index:advice}
-    pattern: /{_locale}/advice/{advice}
+    path: /{_locale}/advice/{advice}
 
 
 building:

@@ -89,7 +89,7 @@ class Unit
     private $power;
 
     /**
-     * @ORM\ManyToOne(targetEntity="UnitType")
+     * @ORM\ManyToOne(targetEntity="UnitType", inversedBy="units")
      * @ORM\JoinColumn(name="type_id", referencedColumnName="id")
      */
     private $type;

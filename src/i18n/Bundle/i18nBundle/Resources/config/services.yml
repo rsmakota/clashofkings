@@ -1,15 +1,15 @@
 services:
     np_i18n.twig_token_parser:
         class: i18n\Bundle\i18nBundle\TokenParser\TwigTokenParser
-        arguments: [@twig]
+        arguments: ['@twig']
 
     np_i18n.twig_file_manager:
         class: i18n\Bundle\i18nBundle\File\TwigFileManager
-        arguments: [%project_src_path%, @kernel]
+        arguments: ['%project_src_path%', '@kernel']
 
     np_i18n.manager:
         class: i18n\Bundle\i18nBundle\Service\i18nManager
-        arguments: [@doctrine.orm.entity_manager]
+        arguments: ['@doctrine.orm.entity_manager']
 
     np_i18n.yaml_manager:
         class: i18n\Bundle\i18nBundle\File\YmlFileManager
